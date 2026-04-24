@@ -22,6 +22,8 @@ import matplotlib.patches as mpatches
 from pathlib import Path
 
 HERE      = Path(__file__).parent
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_ROOT = Path(os.environ.get("WORLDJEN_DATA_ROOT", REPO_ROOT / "data"))
 
 # ── Data ──────────────────────────────────────────────────────────────────────
 
@@ -44,9 +46,9 @@ HUMAN_BT = {
     "wan2.1-1.3b":                               1355.4,
 }
 
-with open(HERE.parent.parent / "gemini_VLM" / "summary_report_unified.json") as f:
+with open(DATA_ROOT / "results" / "summaries" / "summary_report_unified.json") as f:
     gemini_data = json.load(f)
-with open(HERE.parent.parent / "Gemma4VLM" / "results" / "summary_report_gemma4.json") as f:
+with open(DATA_ROOT / "results" / "summaries" / "summary_report_gemma4.json") as f:
     gemma4_data = json.load(f)
 
 MODELS = list(MODEL_SHORT.keys())

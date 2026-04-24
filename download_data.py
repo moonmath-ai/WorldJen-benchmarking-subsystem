@@ -18,8 +18,12 @@ Usage:
 """
 
 import argparse
+import os
 import sys
 from pathlib import Path
+
+from dotenv import load_dotenv
+load_dotenv(Path(__file__).resolve().parent / ".env")
 
 REPO_ID = "ik6626/WorldJen-benchmarking-subsystem"
 DEFAULT_DEST = Path(__file__).resolve().parent / "data"
@@ -60,11 +64,13 @@ def download(dest: Path, include_videos: bool, video_subset: str | None = None):
         print(f"Downloading dataset (no videos) to {dest} ...")
         print("  Use --include-videos to also download video files (~3 GB).")
 
+    token = os.environ.get("HF_TOKEN")
     snapshot_download(
         repo_id=REPO_ID,
         repo_type="dataset",
         local_dir=str(dest),
         ignore_patterns=ignore_patterns,
+        token=token or None,
     )
     print(f"\nDone. Data available at: {dest}")
     print("\nTo get started:")

@@ -18,7 +18,6 @@ import matplotlib.patches as mpatches
 from pathlib import Path
 
 HERE      = Path(__file__).parent
-LATEX_DIR = HERE.parent / 'latex'
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_ROOT = Path(os.environ.get("WORLDJEN_DATA_ROOT", REPO_ROOT / "data"))
 VB_FILE   = DATA_ROOT / "vbench/vbench_summary.json"
@@ -190,7 +189,5 @@ fig.suptitle(
 plt.tight_layout()
 plt.savefig(OUT_PDF, dpi=150, bbox_inches='tight', facecolor='white')
 plt.savefig(OUT_PNG, dpi=150, bbox_inches='tight', facecolor='white')
-plt.savefig(LATEX_DIR / "vbench_evidence.pdf", dpi=150, bbox_inches='tight', facecolor='white')
-plt.savefig(LATEX_DIR / "vbench_evidence.png", dpi=150, bbox_inches='tight', facecolor='white')
 plt.close()
-print(f"Saved → {OUT_PDF}  (+ latex/ copies)")
+print(f"Saved → {OUT_PDF}")

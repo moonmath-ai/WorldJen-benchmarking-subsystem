@@ -13,6 +13,7 @@ Run:  python generate_assassin_appendix.py
 import os
 import json
 import pathlib
+from pathlib import Path
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
