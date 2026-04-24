@@ -1,0 +1,38 @@
+# Core API clients
+google-generativeai>=0.8.0
+anthropic>=0.30.0
+
+# Dataset / model download
+huggingface_hub>=0.23.0
+
+# Environment
+python-dotenv>=1.0.0
+
+# Data processing
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.13.0
+scikit-learn>=1.5.0
+
+# Visualization
+matplotlib>=3.9.0
+seaborn>=0.13.0
+opencv-python>=4.9.0   # video frame extraction (appendix case-study figures, Gemma4 evaluator)
+Pillow>=10.3.0          # image handling in VLM evaluators
+
+# Human eval / BT model
+choix>=0.3.4            # Bradley-Terry MLE used in ELO analysis
+
+# Progress
+tqdm>=4.66.0
+
+# ── Optional: Gemma 4 open-source VLM ablation (A6) only ──────────────────
+# torch>=2.3.0
+# transformers>=4.45.0
+
+# ── Optional: VBench evaluation (Stage 4) ─────────────────────────────────
+# Install VBench from source:
+#   git clone https://github.com/Vchitect/VBench
+#   cd VBench && pip install -r requirements.txt
+# VBench-2.0 (Human Anatomy dimension):
+#   git clone https://github.com/Vchitect/VBench (same repo, VBench-2.0 subfolder)

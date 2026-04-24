@@ -1,0 +1,15 @@
+You are evaluating a video generated from a prompt.
+Dimension: {dimension_name}
+
+Questions to answer:
+1. {question_1}
+   Rubric: {rubric_description_1}
+2. {question_2}
+   Rubric: {rubric_description_2}
+...
+10. {question_10}
+    Rubric: {rubric_description_10}
+
+Answer each question with a score (1-5) and a short justification.
+Return ONLY a JSON list of objects:
+[{"score": X, "justification": "..."}, ...]
