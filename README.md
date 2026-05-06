@@ -7,7 +7,7 @@ Code for reproducing all experiments in the paper:
 
 **Paper (ArXiv):** [https://arxiv.org/abs/2605.03475](https://arxiv.org/abs/2605.03475)
 
-**Paper Page:** [https://moonmath.ai/worldjen/](https://moonmath.ai/worldjen/#paper-demo)
+**Project Page:** [https://moonmath.ai/worldjen/](https://moonmath.ai/worldjen/#paper-demo)
 
 ---
 
