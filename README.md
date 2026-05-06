@@ -5,6 +5,10 @@ Code for reproducing all experiments in the paper:
 
 **Dataset (HuggingFace):** [ik6626/WorldJen-benchmarking-subsystem](https://huggingface.co/datasets/ik6626/WorldJen-benchmarking-subsystem)
 
+**Paper (ArXiv):** [https://arxiv.org/abs/2605.03475](https://arxiv.org/abs/2605.03475)
+
+**Paper Page:** [https://moonmath.ai/worldjen/](https://moonmath.ai/worldjen/#paper-demo)
+
 ---
 
 ## Quick Start
@@ -256,10 +260,14 @@ python ablations/a6_open_source_vlm/analyze_gemma4_results.py
 If you use this code or dataset, please cite:
 
 ```bibtex
-@article{worldjen2026,
-  title   = {WorldJen: An End-to-End Multi-Dimensional Benchmark for Generative Video Models},
-  author  = {Inbasekar, Karthik and Rom, Guy and Shlomovits, Omer},
-  year    = {2026},
+@misc{inbasekar2026worldjen,
+  title         = {WorldJen: An End-to-End Multi-Dimensional Benchmark for Generative Video Models},
+  author        = {Karthik Inbasekar and Guy Rom and Omer Shlomovits},
+  year          = {2026},
+  eprint        = {2605.03475},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2605.03475},
 }
 ```
 
